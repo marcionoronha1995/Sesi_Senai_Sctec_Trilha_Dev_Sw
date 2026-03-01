@@ -1,0 +1,13 @@
+# --- Segurança de Chaves e Scripts ---
+chave_mestra.key
+verificador.py
+desbloquear.py
+
+# --- Pastas de Ambiente Virtual (Python) ---
+venv/
+env/
+__pycache__/
+
+# --- Ficheiros de Sistema ---
+.DS_Store
+Thumbs.db
