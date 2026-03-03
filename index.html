@@ -24,7 +24,7 @@
 
             <img src="https://media.licdn.com/dms/image/v2/D4D03AQHtCNetW_CwDA/profile-displayphoto-scale_200_200/B4DZxcagUIHIAY-/0/1771076980253?e=1773878400&v=beta&t=iMWS9jkhO2aXL5yXaH1ZcBvI-hkt50dtRXmTgYYBams"
                 alt="Márcio Noronha Image">
-                            <p>
+            <p>
                 Este é um parágrafo de exemplo para a seção "Outra section".
 
             </p>
@@ -56,32 +56,44 @@
                 </p>
 
                 <aside>
-                    <h3>Minhas Habilidades</h3>
+                    <h3>Habilidades que estou estudando</h3>
 
-                    <h4>Tecnologias & Programação</h4>
-                    <ul>
-                        <li>Linguagem Python (Desenvolvimento de APIs e Automação)</li>
-                        <li>Framework Flask (Desenvolvimento Web)</li>
-                        <li>Bancos de Dados SQL (PostgreSQL & Cloud Databases)</li>
-                        <li>Versionamento de Código com Git e GitHub</li>
-                        <li>HTML5 & CSS3</li>
-                    </ul>
-
-                    <h4>Gestão & Estratégia</h4>
-                    <ul>
-                        <li>Gestão de TI e Governança</li>
-                        <li>Alianças Estratégicas e Parcerias Comerciais</li>
-                        <li>Gestão de Contas Nacionais (Enterprise)</li>
-                        <li>Estratégia de Negócios e Tecnologia</li>
-                    </ul>
-
-                    <h4>Soft Skills</h4>
-                    <ul>
-                        <li>Comunicação Assertiva e Storytelling</li>
-                        <li>Liderança de Equipes Multidisciplinares</li>
-                        <li>Resolução de Problemas Complexos</li>
-                        <li>Aprendizado Contínuo (Lifelong Learning)</li>
-                    </ul>
+                    <table border="1">
+                        <thead>
+                            <tr>
+                                <th>Tecnologias & Programação</th>
+                                <th>Gestão & Estratégia</th>
+                                <th>Soft Skills</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Linguagem Python (Desenvolvimento de APIs e Automação)</td>
+                                <td>Gestão de TI e Governança</td>
+                                <td>Comunicação Assertiva e Storytelling</td>
+                            </tr>
+                            <tr>
+                                <td>Framework Flask (Desenvolvimento Web)</td>
+                                <td>Alianças Estratégicas e Parcerias Comerciais</td>
+                                <td>Liderança de Equipes Multidisciplinares</td>
+                            </tr>
+                            <tr>
+                                <td>Bancos de Dados SQL (PostgreSQL & Cloud Databases)</td>
+                                <td>Gestão de Contas Nacionais (Enterprise)</td>
+                                <td>Resolução de Problemas Complexos</td>
+                            </tr>
+                            <tr>
+                                <td>Versionamento de Código com Git e GitHub</td>
+                                <td>Estratégia de Negócios e Tecnologia</td>
+                                <td>Aprendizado Contínuo (Lifelong Learning)</td>
+                            </tr>
+                            <tr>
+                                <td>HTML5 & CSS3</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </aside>
             </article>
         </section>
@@ -93,7 +105,7 @@
                 <h3>Sistema de Controle Financeiro Pessoal</h3>
                 <p>Desenvolvimento de uma aplicação para gestão de pagamentos e recebimentos.</p>
                 <ul>
-                    <li><strong>Tecnologias:</strong> Python,  e PostgreSQL.</li>
+                    <li><strong>Tecnologias:</strong> Python, e PostgreSQL.</li>
                     <li><strong>Destaque:</strong> Implementação de CRUD completo e integração com banco de dados em
                         nuvem.</li>
                 </ul>
@@ -128,13 +140,61 @@
             <p>&copy; 2026 - Todos os direitos reservados</p>
 
             <h2>Contatos</h2>
+
+
+
             <ul>
                 <li>Email: <a href="mailto:marcionoronha1995@gmail.com">marcionoronha1995@gmail.com</a></li>
-                <li>Telefone: <a href="tel:+5548998600140">+55 (48)     99860-0140</a></li>
-                <li>LinkedIn: <a href="https://www.linkedin.com/in/marcionoronha1995">https://www.linkedin.com/in/marcionoronha1995/</a></li>
+                <li>Telefone: <a href="tel:+5548998600140">+55 (48) 99860-0140</a></li>
+                <li>LinkedIn: <a
+                        href="https://www.linkedin.com/in/marcionoronha1995">https://www.linkedin.com/in/marcionoronha1995/</a>
+                </li>
             </ul>
 
+            <h2>Mande uma mensagem</h2>
+<p>Tem um projeto em mente, entre em contato!</p>
 
+            <form action="#" method="post">
+                <div>
+
+                </div>
+                <div>
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="user_name" required>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="user_email" required>
+                </div>
+                <div>
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" name="user_phone">
+                </div>
+                <div>
+                    <label for="assunto">Assunto:</label>
+                    <select id="assunto" name="assunto">
+                        <option value="desenvolvimento">Desenvolvimento</option>
+                        <option value="duvida_tecnica">Dúvida Técnica</option>
+                        <option value="orcamento">Orçamento</option>
+                        <option value="retornar_contato">Retornar o contato</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="data">Data:</label>
+                    <input type="date" id="data" name="data">
+                </div>
+                <div>
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="user_message" cols="30" rows="5" required></textarea>
+                </div>
+
+                <input type="checkbox" name="inscricao" id="inscricao">
+                <label for="inscricao">Desejo receber novidades e atualizações por email.</label>
+
+                <button type="submit">Enviar</button>
+                
+
+            </form>
 
 
         </footer>
