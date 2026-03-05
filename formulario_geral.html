@@ -16,12 +16,12 @@
     </header>
 
     <main>
-        <form action="#" method="post">
+        <form name="form" id="form" action="#" method="post">
             <section>
                 <h2>Dados Pessoais</h2>
                 <div>
-                    <label for="nome_completo">Nome Completo:</label>
-                    <input type="text" id="nome_completo" name="nome_completo" required>
+                    <label for="nome">Nome Completo:</label>
+                    <input type="text" id="nome" name="nome" required>
                 </div>
                 <div>
                     <label for="e_mail">E-mail:</label>
@@ -31,12 +31,20 @@
                     <label for="idade">Idade:</label>
                     <input type="number" id="idade" name="idade">
                 </div>
+                <div>
+                    <label for="turnos_disponiveis">Turnos Disponíveis:</label>
+                    <select id="turnos_disponiveis" name="turnos_disponiveis">
+                        <option value="manha">Manhã</option>
+                        <option value="tarde">Tarde</option>
+                        <option value="noite">Noite</option>
+                    </select>
+                </div>
             </section>
 
             <section>
                 <h2>Informações Acadêmicas</h2>
                 <div>
-                    <label for="materia">Matéria:</label>
+                    <label for="materia" id="materia">Matéria:</label>
                     <select id="materia" name="materia">
                         <option value="matematica">Matemática</option>
                         <option value="portugues">Português</option>
