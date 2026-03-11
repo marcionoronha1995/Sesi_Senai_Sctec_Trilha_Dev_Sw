@@ -170,6 +170,15 @@ footer {
 #formulario-contato input[type="email"],
 #formulario-contato input[type="tel"],
 #formulario-contato input[type="date"],
+#formulario-contato input[type="checkbox"],
+#formulario-contato input[type="idade"],
+#formulario-contato select,
+#formulario-contato textarea{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
 #formulario-contato select,
 #formulario-contato textarea {
     width: 100%;
