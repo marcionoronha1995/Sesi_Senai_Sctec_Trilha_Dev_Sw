@@ -12,6 +12,7 @@ body {
     margin: 0; /* O espaçamento lateral será controlado pelo padding dos filhos */
     /* Adiciona um espaçamento no topo do corpo da página para não ficar atrás do cabeçalho fixo */
     padding-top: 80px;
+    font-size: 100%; /* Fallback: garante tamanho padrão caso o navegador não suporte clamp */
     font-size: clamp(14px, 1.5vw, 16px); /* Fonte responsiva: mínimo 14px, máximo 16px */
 }
 
@@ -34,6 +35,13 @@ main {
     display: flex;
     gap: 20px;
     padding: 20px 5px; /* Define espaçamento vertical de 20px e lateral de 5px */
+}
+
+/* Garante que imagens sejam responsivas e não estouram o container em nenhum navegador */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 h1,
@@ -90,6 +98,12 @@ a:hover {
     text-decoration: underline;
 }
 
+/* Herança de fonte para elementos de formulário (corrige inconsistências entre navegadores) */
+input, button, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+}
+
 nav label {
     /* Esconde o label visualmente, mas o mantém para acessibilidade */
     position: absolute;
@@ -119,6 +133,19 @@ ul li {
 article > h3 {
     margin-top: 50px;
     color: #051074;
+}
+
+/* Estilização consistente de tabelas via CSS, ignorando diferenças de renderização padrão */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
 }
 
 /* Media Query para responsividade do layout principal em tablets e dispositivos menores */
