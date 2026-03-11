@@ -12,16 +12,21 @@
     <header>
         <h1>Painel de Dados</h1>
         <nav>
-            <ul>
-                <li><a href="index.html">Voltar ao Início</a></li>
-            </ul>
+            <label for="menu-navegacao">Navegação</label>
+            <select id="menu-navegacao" onchange="if (this.value) window.location.href=this.value;">
+                <option value="">Menu</option>
+                <option value="index.html">Voltar ao Início</option>
+            </select>
         </nav>
     </header>
 
     <main>
         <section>
             <h2>Visão Geral</h2>
-            <p>Aqui estão os dados e métricas dos projetos recentes.</p>
+            <div class="card-container">
+                <p class="box">Aqui estão os dados e métricas dos projetos recentes. Este é o primeiro bloco.</p>
+                <p class="box">Este é um segundo bloco para demonstrar o layout de duas colunas.</p>
+            </div>
 
             <!-- Exemplo de Tabela de Dados -->
             <table border="1">

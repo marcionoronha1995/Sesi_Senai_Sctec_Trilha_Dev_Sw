@@ -1,23 +1,84 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f4f4f9;
     color: #333;
     line-height: 1.6;
-    margin: 0;
-    padding: 20px;
+    margin: 0; /* O espaçamento lateral será controlado pelo padding dos filhos */
+    /* Adiciona um espaçamento no topo do corpo da página para não ficar atrás do cabeçalho fixo */
+    padding-top: 80px;
+    font-size: clamp(14px, 1.5vw, 16px); /* Fonte responsiva: mínimo 14px, máximo 16px */
+}
+
+header {
+    position: fixed; /* Fixa o cabeçalho no topo da tela */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f4f4f9; /* Garante que o fundo não seja transparente */
+    z-index: 1000; /* Garante que o cabeçalho fique sobre o outro conteúdo */
+    border-bottom: 1px solid #ddd;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+main {
+    display: flex;
+    gap: 20px;
+    padding: 20px 5px; /* Define espaçamento vertical de 20px e lateral de 5px */
 }
 
 h1,
 h2,
 h3 {
     color: #2c3e50;
+    margin-bottom: 0.5em;
 }
 
-p {
-    margin-bottom: 15px;
-    font-size: 16px;
-    line-height: 1.6;
+/* Definição das colunas do layout */
+.main-content {
+    flex: 2; /* Coluna central mais larga */
+    min-width: 0; /* Evita que o conteúdo vaze */
+}
+
+.left-column,
+.right-column {
+    flex: 1; /* Colunas laterais com metade da largura da central */
+    min-width: 0;
+}
+
+p { /* Estilos gerais para todos os parágrafos */
     color: #6c757d;
+    margin-bottom: 1em;
+}
+
+/* Estilo unificado para parágrafos que funcionam como caixas de conteúdo */
+main p {
+    background-color: #fff;
+    border: 1px solid #e1e1e1;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+/* Container para os cartões que ficarão em colunas */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* Estilo específico para os cartões em colunas (.box) - usado no Dashboard */
+.box {
+    flex: 1 1 calc(50% - 8px); /* Define que o parágrafo ocupe metade do espaço */
+    margin: 0; /* O gap do .card-container cuida do espaçamento */
 }
 
 a {
@@ -25,9 +86,52 @@ a {
     text-decoration: none;
 }
 
-div {
-    margin-bottom: 3px;
-    padding: 0%;
-    background-color: #e9ecef;
-    border-radius: 0%;
+a:hover {
+    text-decoration: underline;
+}
+
+nav label {
+    /* Esconde o label visualmente, mas o mantém para acessibilidade */
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+nav select {
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+ul li {
+    margin-bottom: 2px;
+    color: rgb(13, 58, 97);
+    /* O reset '*' removeu o espaçamento da lista. Adicionamos de volta para os marcadores aparecerem. */
+    margin-left: 20px;
+}
+
+article > h3 {
+    margin-top: 50px;
+    color: #051074;
+}
+
+/* Media Query para responsividade do layout principal em tablets e dispositivos menores */
+@media (max-width: 1024px) {
+    main {
+        flex-direction: column;
+    }
+}
+
+/* Media Query para responsividade dos cards em telas de celular */
+@media (max-width: 768px) {
+    .box {
+        /* Em telas menores, os cards ocupam 100% da largura e empilham */
+        flex: 1 1 100%;
+    }
 }

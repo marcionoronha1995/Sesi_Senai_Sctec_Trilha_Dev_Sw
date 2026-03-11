@@ -13,153 +13,131 @@
         <h1>Márcio Noronha</h1>
 
         <nav>
-            <ul>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#projetos">Projetos</a></li>
-                <li><a href="#contato">Contatos</a></li>
-                <li><a href="formulario_geral.html">Formulário</a></li>
-                <li><a href="dashboard.html">Dashboard</a></li>
-            </ul>
+            <label for="menu-navegacao">Navegação Rápida</label>
+            <select id="menu-navegacao" onchange="if (this.value) window.location.href=this.value;">
+                <option value="">Selecione...</option>
+                <option value="#sobre">Sobre</option>
+                <option value="#projetos">Projetos</option>
+                <option value="#contato">Contatos</option>
+                <option value="formulario_geral.html">Formulário</option>
+                <option value="dashboard.html">Dashboard</option>
+            </select>
         </nav>
+    </header>
 
-        <section>
-            <h2>Outra section</h2>
-
+    <main>
+        <!-- Coluna da Esquerda -->
+        <div id="coluna-esquerda" class="column left-column">
+            <h2>Bem-vindo</h2>
             <img src="https://media.licdn.com/dms/image/v2/D4D03AQHtCNetW_CwDA/profile-displayphoto-scale_200_200/B4DZxcagUIHIAY-/0/1771076980253?e=1773878400&v=beta&t=iMWS9jkhO2aXL5yXaH1ZcBvI-hkt50dtRXmTgYYBams"
                 alt="Márcio Noronha Image">
-            <p>
-                Este é um parágrafo de exemplo para a seção "Outra section".
+            <p>Este é um parágrafo de exemplo para a seção "Outra section".</p>
+        </div>
 
-            </p>
-
+        <!-- Conteúdo Principal (Centro) -->
+        <div id="conteudo-central" class="column main-content">
             <article id="sobre">
                 <h3>Sobre mim</h3>
                 <h3>Marcio Noronha: Tecnologia, Estratégia e o Fator Humano</h3>
-                <p>
-                    Com mais de 25 anos de trajetória profissional, minha carreira foi construída na intersecção entre a
-                    gestão de TI e a estratégia de negócios. Como Head de TI e gestor de alianças estratégicas,
-                    desenvolvi uma visão analítica que hoje aplico não apenas em sistemas, mas no entendimento do
-                    comportamento humano através da neurociência.
-                </p>
+                <p class="bloco_texto">Com mais de 25 anos de trajetória profissional, minha carreira foi construída na intersecção entre a gestão de TI e a estratégia de negócios. Como Head de TI e gestor de alianças estratégicas, desenvolvi uma visão analítica que hoje aplico não apenas em sistemas, mas no entendimento do comportamento humano através da neurociência.</p>
 
                 <h3>A Neurociência como Ferramenta de Evolução</h3>
-                <p>
-                    Acredito que a verdadeira mudança de hábito e a alta autoestima são frutos da neuroplasticidade
-                    aplicada. Meu foco é auxiliar indivíduos a desenvolverem planos de ação práticos para a melhoria da
-                    qualidade de vida, utilizando o conhecimento científico para promover escolhas mais conscientes,
-                    relacionamentos efetivos e o estabelecimento de limites saudáveis.
-                </p>
+                <p class="bloco_texto">Acredito que a verdadeira mudança de hábito e a alta autoestima são frutos da neuroplasticidade aplicada. Meu foco é auxiliar indivíduos a desenvolverem planos de ação práticos para a melhoria da qualidade de vida, utilizando o conhecimento científico para promover escolhas mais conscientes, relacionamentos efetivos e o estabelecimento de limites saudáveis.</p>
 
                 <h3>Inovação em Python e Inteligência Artificial</h3>
-                <p>
-                    Atualmente, uno minha experiência executiva ao desenvolvimento técnico em Python e Flask, explorando
-                    como a automação e a IA podem otimizar processos e liberar potencial humano. Sou movido pelo desafio
-                    de integrar a precisão do código com a complexidade da mente, criando soluções que geram valor real
-                    e bem-estar.
-                </p>
-
-                <aside>
-                    <h3>Habilidades que estou estudando</h3>
-
-                    <table border="1">
-                        <thead>
-                            <tr>
-                                <th>Tecnologias & Programação</th>
-                                <th>Gestão & Estratégia</th>
-                                <th>Soft Skills</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Linguagem Python (Desenvolvimento de APIs e Automação)</td>
-                                <td>Gestão de TI e Governança</td>
-                                <td>Comunicação Assertiva e Storytelling</td>
-                            </tr>
-                            <tr>
-                                <td>Framework Flask (Desenvolvimento Web)</td>
-                                <td>Alianças Estratégicas e Parcerias Comerciais</td>
-                                <td>Liderança de Equipes Multidisciplinares</td>
-                            </tr>
-                            <tr>
-                                <td>Bancos de Dados SQL (PostgreSQL & Cloud Databases)</td>
-                                <td>Gestão de Contas Nacionais (Enterprise)</td>
-                                <td>Resolução de Problemas Complexos</td>
-                            </tr>
-                            <tr>
-                                <td>Versionamento de Código com Git e GitHub</td>
-                                <td>Estratégia de Negócios e Tecnologia</td>
-                                <td>Aprendizado Contínuo (Lifelong Learning)</td>
-                            </tr>
-                            <tr>
-                                <td>HTML5 & CSS3</td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </aside>
+                <p class="bloco_texto">Atualmente, uno minha experiência executiva ao desenvolvimento técnico em Python e Flask, explorando como a automação e a IA podem otimizar processos e liberar potencial humano. Sou movido pelo desafio de integrar a precisão do código com a complexidade da mente, criando soluções que geram valor real e bem-estar.</p>
             </article>
-        </section>
+            <section id="projetos">
+                <h2>Projetos Em Andamento</h2>
+                <article>
+                    <h3>Sistema de Controle Financeiro Pessoal</h3>
+                    <p>Desenvolvimento de uma aplicação para gestão de pagamentos e recebimentos.</p>
+                    <ul>
+                        <li><strong>Tecnologias:</strong> Python, e PostgreSQL.</li>
+                        <li><strong>Destaque:</strong> Implementação de CRUD completo e integração com banco de dados em nuvem.</li>
+                    </ul>
+                </article>
+                <hr>
+                <article>
+                    <h3>Automação de Processos com IA</h3>
+                    <p>Criação de scripts e fluxos utilizando a API do Gemini para otimização de tarefas repetitivas.</p>
+                    <ul>
+                        <li><strong>Tecnologias:</strong> Python e Google AI SDK.</li>
+                        <li><strong>Destaque:</strong> Redução de tempo em análise de dados e geração de conteúdo.</li>
+                    </ul>
+                </article>
+                <hr>
+                <article>
+                    <h3>Gestão de Alianças Estratégicas (Enterprise)</h3>
+                    <p>Liderança e manutenção de contas de alta relevância nacional no setor de autoatendimento.</p>
+                    <ul>
+                        <li><strong>Clientes:</strong> Itaú, Bradesco, McDonald's e C&A.</li>
+                        <li><strong>Destaque:</strong> Expansão de parcerias e entrega de soluções tecnológicas complexas.</li>
+                    </ul>
+                </article>
+            </section>
+        </div>
 
-        <section id="projetos">
-            <h2>Projetos Em Andamento</h2>
+        <!-- Coluna da Direita -->
+        <div id="coluna-direita" class="column right-column">
+            <h3>Habilidades que estou estudando</h3>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Tecnologias & Programação</th>
+                        <th>Gestão & Estratégia</th>
+                        <th>Soft Skills</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Linguagem Python (Desenvolvimento de APIs e Automação)</td>
+                        <td>Gestão de TI e Governança</td>
+                        <td>Comunicação Assertiva e Storytelling</td>
+                    </tr>
+                    <tr>
+                        <td>Framework Flask (Desenvolvimento Web)</td>
+                        <td>Alianças Estratégicas e Parcerias Comerciais</td>
+                        <td>Liderança de Equipes Multidisciplinares</td>
+                    </tr>
+                    <tr>
+                        <td>Bancos de Dados SQL (PostgreSQL & Cloud Databases)</td>
+                        <td>Gestão de Contas Nacionais (Enterprise)</td>
+                        <td>Resolução de Problemas Complexos</td>
+                    </tr>
+                    <tr>
+                        <td>Versionamento de Código com Git e GitHub</td>
+                        <td>Estratégia de Negócios e Tecnologia</td>
+                        <td>Aprendizado Contínuo (Lifelong Learning)</td>
+                    </tr>
+                    <tr>
+                        <td>HTML5 & CSS3</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
 
-            <article>
-                <h3>Sistema de Controle Financeiro Pessoal</h3>
-                <p>Desenvolvimento de uma aplicação para gestão de pagamentos e recebimentos.</p>
-                <ul>
-                    <li><strong>Tecnologias:</strong> Python, e PostgreSQL.</li>
-                    <li><strong>Destaque:</strong> Implementação de CRUD completo e integração com banco de dados em
-                        nuvem.</li>
-                </ul>
-            </article>
 
-            <hr>
-
-            <article>
-                <h3>Automação de Processos com IA</h3>
-                <p>Criação de scripts e fluxos utilizando a API do Gemini para otimização de tarefas repetitivas.</p>
-                <ul>
-                    <li><strong>Tecnologias:</strong> Python e Google AI SDK.</li>
-                    <li><strong>Destaque:</strong> Redução de tempo em análise de dados e geração de conteúdo.</li>
-                </ul>
-            </article>
-
-            <hr>
-
-            <article>
-                <h3>Gestão de Alianças Estratégicas (Enterprise)</h3>
-                <p>Liderança e manutenção de contas de alta relevância nacional no setor de autoatendimento.</p>
-                <ul>
-                    <li><strong>Clientes:</strong> Itaú, Bradesco, McDonald's e C&A.</li>
-                    <li><strong>Destaque:</strong> Expansão de parcerias e entrega de soluções tecnológicas complexas.
-                    </li>
-                </ul>
-            </article>
-        </section>
-
-
-        <footer id="contato">
+    <footer id="contato">
+        <div id="informacoes-contato">
             <p>&copy; 2026 - Todos os direitos reservados</p>
-
             <h2>Contatos</h2>
-
-
-
             <ul>
                 <li>Email: <a href="mailto:marcionoronha1995@gmail.com">marcionoronha1995@gmail.com</a></li>
                 <li>Telefone: <a href="tel:+5548998600140">+55 (48) 99860-0140</a></li>
                 <li>LinkedIn: <a
-                        href="https://www.linkedin.com/in/marcionoronha1995">https://www.linkedin.com/in/marcionoronha1995/</a>
+                        href="https://www.linkedin.com/in/marcionoronha1995/">https://www.linkedin.com/in/marcionoronha1995/</a>
                 </li>
             </ul>
-
+        </div>
+        <div id="formulario-contato">
             <h2>Mande uma mensagem</h2>
-<p>Tem um projeto em mente, entre em contato!</p>
-
+            <p>Tem um projeto em mente, entre em contato!</p>
             <form action="#" method="post">
                 <div>
-
                 </div>
                 <div>
                     <label for="nome">Nome:</label>
@@ -190,19 +168,12 @@
                     <label for="mensagem">Mensagem:</label>
                     <textarea id="mensagem" name="user_message" cols="30" rows="5" required></textarea>
                 </div>
-
                 <input type="checkbox" name="inscricao" id="inscricao">
                 <label for="inscricao">Desejo receber novidades e atualizações por email.</label>
-
                 <button type="submit">Enviar</button>
-                
-
             </form>
-
-
-        </footer>
-
-    </header>
+        </div>
+    </footer>
 </body>
 
 </html>
